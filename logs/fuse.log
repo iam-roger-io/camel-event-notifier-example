@@ -3589,3 +3589,1245 @@ java.lang.Exception: Exception throwed to test
 954985 [Thread-2] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.21.0.fuse-750033-redhat-00001 (CamelContext: camel-1) is shutdown in 0.035 seconds
 954985 [Thread-2] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
 954991 [Thread-2] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+665  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 12425 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+874  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+1571 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.consulting.fuse.poc.Application]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+1594 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+1599 [main] ERROR o.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.consulting.fuse.poc.Application]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:596)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:805)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:801)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:771)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.consulting.fuse.poc.Application.main(Application.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:59)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:218)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:586)
+	... 25 common frames omitted
+Caused by: java.lang.ClassCastException: java.lang.ClassNotFoundException cannot be cast to java.lang.Class
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnEnabledEndpointCondition.getEndpointType(OnEnabledEndpointCondition.java:92)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnEnabledEndpointCondition.getEndpointAttributes(OnEnabledEndpointCondition.java:86)
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnEnabledEndpointCondition.getMatchOutcome(OnEnabledEndpointCondition.java:56)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:46)
+	... 28 common frames omitted
+665  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 12969 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+669  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+4126 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$346ea60f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4439 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @9675ms to org.eclipse.jetty.util.log.Slf4jLog
+4586 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4590 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+5040 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+5040 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4060 ms
+5522 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+5529 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@1aebc4d1
+6029 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+6029 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+6033 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+6041 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+6094 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+6097 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+6101 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@79966454{application,/,[file:///tmp/jetty-docbase.7100531195010359338.8080/],AVAILABLE}
+6102 [main] INFO  org.eclipse.jetty.server.Server - Started @11338ms
+6589 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+7302 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+7399 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+7399 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+7400 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+7401 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+7628 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+7793 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+7848 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+7870 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+7887 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+7887 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+7891 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=trigger%2Ftmp%2Ffailed.txt&noop=false
+7892 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+7892 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+7893 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.492 seconds
+7893 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+7918 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+7921 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+7922 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+7924 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+8031 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+8311 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+8312 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+8324 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+8326 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+8360 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@616fe3a2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+8362 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+8366 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 8.093 seconds (JVM running for 13.603)
+150965 [Camel (camel-1) thread #1 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+150968 [Camel (camel-1) thread #1 - file://trigger/] INFO  route-a - next step to("bean:test1Processor") will be executed
+150972 [Camel (camel-1) thread #1 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed2
+150983 [Camel (camel-1) thread #1 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed3
+150983 [Camel (camel-1) thread #1 - file://trigger/] INFO  route-a - next step to("bean:test1Processor") executed
+150988 [Camel (camel-1) thread #1 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed4
+210486 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+210488 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public final class org.apache.camel.impl.DefaultExchange
+210490 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+210490 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+210490 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+210491 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+370850 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+370850 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 7
+370851 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 2 routes (timeout 300 seconds)
+370854 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-b shutdown complete, was consuming from: file://trigger/?fileName=testb.txt&moveFailed=trigger%2Ftmp%2Ffailed.txt&noop=false
+370855 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+370855 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 2 routes completed in 0 seconds
+370856 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+370857 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+370857 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed10
+370857 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+370861 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 12
+370866 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 6 minutes
+370866 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.016 seconds
+370868 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+370879 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@616fe3a2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+370879 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+370881 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+370881 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+370881 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+370882 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@79966454{application,/,[file:///tmp/jetty-docbase.7100531195010359338.8080/],UNAVAILABLE}
+872  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 13478 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+880  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+4911 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$7711433f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+5265 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @11194ms to org.eclipse.jetty.util.log.Slf4jLog
+5469 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+5477 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+5577 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+5577 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4352 ms
+7395 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+7429 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@14303c29
+8060 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+8060 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+8064 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+8075 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+8138 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+8140 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+8143 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@11222960{application,/,[file:///tmp/jetty-docbase.2770841149698723488.8080/],AVAILABLE}
+8144 [main] INFO  org.eclipse.jetty.server.Server - Started @14076ms
+8688 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+9545 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+9698 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+9699 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+9700 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+9702 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+9811 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+10012 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+10066 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+10085 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+10100 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+10100 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+10106 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+10107 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+10107 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+10109 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.407 seconds
+10109 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+10147 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+10151 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+10151 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+10153 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+10188 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+10539 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10539 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10553 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+10555 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+10595 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@447cf4e2{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+10599 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+10604 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 10.264 seconds (JVM running for 16.536)
+177591 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+761  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 13798 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+767  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3791 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$74a8d820] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4049 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8919ms to org.eclipse.jetty.util.log.Slf4jLog
+4160 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4164 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4490 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4490 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3319 ms
+4954 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4962 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@556a239d
+5431 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5431 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5434 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+5441 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5491 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5492 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5494 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@57e28816{application,/,[file:///tmp/jetty-docbase.3762331652100715800.8080/],AVAILABLE}
+5495 [main] INFO  org.eclipse.jetty.server.Server - Started @10367ms
+5892 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6531 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6665 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6665 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6666 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6668 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6835 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6988 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+7033 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+7055 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+7070 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+7070 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+7073 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+7074 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+7075 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+7077 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.409 seconds
+7077 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+7106 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+7109 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+7109 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+7111 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+7247 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+7456 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+7456 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+7466 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+7468 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+7497 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4fa0bcbe{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+7500 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+7504 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 7.213 seconds (JVM running for 12.375)
+8079 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+8084 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+8086 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+8086 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+8086 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+8090 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+103133 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+103133 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+103133 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+103133 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+103133 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+103134 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+127477 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+127477 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 7
+127478 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 2 routes (timeout 300 seconds)
+127481 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-b shutdown complete, was consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+127482 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+127483 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 2 routes completed in 0 seconds
+127484 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+127485 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+127486 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed10
+127486 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+127488 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 12
+127497 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 2 minutes
+127497 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.020 seconds
+127500 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+127509 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4fa0bcbe{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+127509 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+127510 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+127511 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+127511 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+127511 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@57e28816{application,/,[file:///tmp/jetty-docbase.3762331652100715800.8080/],UNAVAILABLE}
+907  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 14011 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+911  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3611 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$89fbf7cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3893 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8432ms to org.eclipse.jetty.util.log.Slf4jLog
+4005 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4009 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4555 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4556 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3592 ms
+4987 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4994 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@fe096ef
+5382 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5382 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5385 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+5391 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5434 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5437 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5439 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@4109df5a{application,/,[file:///tmp/jetty-docbase.3143144334762250522.8080/],AVAILABLE}
+5446 [main] INFO  org.eclipse.jetty.server.Server - Started @9987ms
+5762 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6339 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6445 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6446 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6447 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6448 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6540 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6703 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6741 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6758 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6770 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+6770 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+6774 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+6774 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+6774 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+6775 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.327 seconds
+6775 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+6793 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+6796 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+6796 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+6798 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+6890 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+7099 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+7099 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+7108 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+7109 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+7138 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3a8716e6{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+7140 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+7142 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 6.86 seconds (JVM running for 11.683)
+82314 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+82323 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585076581328-0-2 on ExchangeId: ID-rosantos-1585076581328-0-1). Exhausted after delivery attempt: 1 caught: java.lang.Exception: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-b           ] [route-b           ] [file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false               ] [         7]
+[route-b           ] [process1          ] [Processor@0x44767315                                                          ] [         3]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+java.lang.Exception: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:54)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+82324 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@6be4ee4f for file: GenericFile[testb.txt]
+82328 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+131837 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+131837 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+131837 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 2 routes (timeout 300 seconds)
+131840 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-b shutdown complete, was consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+131841 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+131841 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 2 routes completed in 0 seconds
+131842 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed4
+131843 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+131844 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed6
+131844 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+131846 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 8
+131855 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 2 minutes
+131855 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.018 seconds
+131858 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+131868 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3a8716e6{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+131868 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+131869 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+131869 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+131870 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+131871 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@4109df5a{application,/,[file:///tmp/jetty-docbase.3143144334762250522.8080/],UNAVAILABLE}
+629  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 14197 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+632  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3389 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$78f47e35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3622 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8127ms to org.eclipse.jetty.util.log.Slf4jLog
+3735 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+3739 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4122 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4122 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3215 ms
+4564 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4572 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@6eb0ff2d
+4991 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+4991 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+4994 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+5000 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5040 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5041 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5043 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1c49c715{application,/,[file:///tmp/jetty-docbase.5091726169685351779.8080/],AVAILABLE}
+5043 [main] INFO  org.eclipse.jetty.server.Server - Started @9549ms
+5402 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6109 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6243 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6243 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6244 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6246 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6333 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6508 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6556 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6578 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6593 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+6593 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+6598 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+6598 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+6598 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+6599 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.355 seconds
+6600 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+6626 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+6631 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+6632 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+6633 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+6659 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+6905 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+6905 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+6914 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+6915 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+6946 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@c619856{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+6949 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+6953 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 6.716 seconds (JVM running for 11.459)
+80136 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+80141 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+80142 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+80143 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+80143 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+80145 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585076720885-0-2 on ExchangeId: ID-rosantos-1585076720885-0-1). Exhausted after delivery attempt: 1 caught: java.lang.Exception: Exception throwed to test. Processed by failure processor: FatalFallbackErrorHandler[Channel[sendTo(mock://exception)]]
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-b           ] [route-b           ] [file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false               ] [         7]
+[route-b           ] [process1          ] [Processor@0x4e7985a9                                                          ] [         5]
+[route-b           ] [to1               ] [mock:exception                                                                ] [         1]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+java.lang.Exception: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:54)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+80145 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@4f2c762b for file: GenericFile[testb.txt]
+80150 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed6
+444341 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+444342 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 7
+444342 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 2 routes (timeout 300 seconds)
+444345 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-b shutdown complete, was consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+444346 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+444346 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 2 routes completed in 0 seconds
+444347 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+444348 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+444349 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed10
+444349 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+444350 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 12
+444364 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 7 minutes
+444364 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.023 seconds
+444367 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+444378 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@c619856{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+444378 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+444380 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+444381 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+444381 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+444383 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@1c49c715{application,/,[file:///tmp/jetty-docbase.5091726169685351779.8080/],UNAVAILABLE}
+720  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 14698 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+725  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3710 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$37ceaa93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3976 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8885ms to org.eclipse.jetty.util.log.Slf4jLog
+4095 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4099 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4507 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4508 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3357 ms
+5019 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+5026 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@dcbf229
+5421 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5421 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5423 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+5431 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5476 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5478 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5480 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@1d2809f8{application,/,[file:///tmp/jetty-docbase.2276157423517224387.8080/],AVAILABLE}
+5481 [main] INFO  org.eclipse.jetty.server.Server - Started @10392ms
+5841 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6549 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6674 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6674 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6676 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6677 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6806 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6978 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+7026 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+7048 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+7062 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+7062 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed4
+7066 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+7066 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+7067 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 2 routes, of which 2 are started
+7068 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.392 seconds
+7068 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 6
+7093 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+7096 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+7096 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+7097 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+7120 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+7359 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+7359 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+7370 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+7372 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+7406 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3d45c7c6{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+7409 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+7412 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 7.155 seconds (JVM running for 12.323)
+21079 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+21086 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585077174264-0-2 on ExchangeId: ID-rosantos-1585077174264-0-1). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-b           ] [route-b           ] [file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false               ] [         6]
+[route-b           ] [process1          ] [Processor@0x5f8d46ca                                                          ] [         2]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+21086 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@5d1103f8 for file: GenericFile[testb.txt]
+21090 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+118642 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+118643 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+118643 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 2 routes (timeout 300 seconds)
+118646 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-b shutdown complete, was consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+118647 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+118647 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 2 routes completed in 0 seconds
+118648 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed4
+118649 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+118649 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed6
+118650 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+118651 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 8
+118658 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 1 minute
+118658 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.016 seconds
+118660 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+118668 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3d45c7c6{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+118669 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+118671 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+118671 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+118671 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+118673 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@1d2809f8{application,/,[file:///tmp/jetty-docbase.2276157423517224387.8080/],UNAVAILABLE}
+818  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 14881 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+824  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+4513 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$4fa3e16f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4776 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @9923ms to org.eclipse.jetty.util.log.Slf4jLog
+5195 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+5200 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+5266 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+5266 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4137 ms
+5879 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+5894 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@609c380a
+6431 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+6431 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+6434 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+6446 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+6507 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+6509 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+6513 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@7f3b657a{application,/,[file:///tmp/jetty-docbase.8824188680334117788.8080/],AVAILABLE}
+6514 [main] INFO  org.eclipse.jetty.server.Server - Started @11662ms
+6969 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+7718 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+7854 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+7855 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+7856 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+7857 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+7959 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+64961 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartupFailureEvent2
+64961 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+64962 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+64968 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 4
+64979 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 57.123 seconds
+64979 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.018 seconds
+64985 [main] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+64987 [main] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+64988 [main] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@7f3b657a{application,/,[file:///tmp/jetty-docbase.8824188680334117788.8080/],UNAVAILABLE}
+65013 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+65020 [main] ERROR o.springframework.boot.SpringApplication - Application run failed
+org.apache.camel.RuntimeCamelException: org.apache.camel.FailedToStartRouteException: Failed to start route route-b because of duplicate id detected: route-b. Please correct ids to be unique among all your routes.
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1826)
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:136)
+	at org.apache.camel.spring.CamelContextFactoryBean.start(CamelContextFactoryBean.java:370)
+	at org.apache.camel.spring.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:417)
+	at org.apache.camel.spring.CamelContextFactoryBean.onApplicationEvent(CamelContextFactoryBean.java:95)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.consulting.fuse.poc.Application.main(Application.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.camel.FailedToStartRouteException: Failed to start route route-b because of duplicate id detected: route-b. Please correct ids to be unique among all your routes.
+	at org.apache.camel.impl.DefaultCamelContext.startRoute(DefaultCamelContext.java:1129)
+	at org.apache.camel.impl.DefaultCamelContext.startRouteDefinitions(DefaultCamelContext.java:3735)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3440)
+	at org.apache.camel.impl.DefaultCamelContext$4.call(DefaultCamelContext.java:3248)
+	at org.apache.camel.impl.DefaultCamelContext$4.call(DefaultCamelContext.java:3244)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:3267)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:3244)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:72)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:3160)
+	at org.apache.camel.spring.SpringCamelContext.start(SpringCamelContext.java:133)
+	... 24 common frames omitted
+65028 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+763  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 15036 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+770  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+4656 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$6904f441] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4934 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @10224ms to org.eclipse.jetty.util.log.Slf4jLog
+5277 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+5281 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+5335 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+5335 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4147 ms
+6009 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+6024 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@7931ab97
+6539 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+6539 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+6542 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+6552 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+6601 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+6603 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+6605 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@220eb54f{application,/,[file:///tmp/jetty-docbase.4916660330214648399.8080/],AVAILABLE}
+6606 [main] INFO  org.eclipse.jetty.server.Server - Started @11898ms
+7100 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+8025 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+8233 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+8233 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+8235 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+8237 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+8374 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+8641 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+8719 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+8746 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+8756 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+8775 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+8776 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+8781 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-b started and consuming from: file://trigger/?fileName=testb.txt&moveFailed=failed&noop=false
+8781 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+8786 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-c started and consuming from: file://trigger/?fileName=testc.txt&moveFailed=failed&noop=false
+8786 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+8786 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+8788 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.551 seconds
+8788 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+8825 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+8828 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+8829 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+8831 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+8861 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+9207 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+9208 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+9224 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+9227 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+9277 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@53e9509{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+9281 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+9286 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 8.985 seconds (JVM running for 14.578)
+153848 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+153855 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+153856 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+153857 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+153857 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+153861 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+711  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 15640 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+716  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3944 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$736590d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4180 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8755ms to org.eclipse.jetty.util.log.Slf4jLog
+4291 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4294 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4725 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4725 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3584 ms
+5168 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+5176 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@7c41c5ab
+5613 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5614 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5616 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+5625 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5679 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5681 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5684 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3c8460f4{application,/,[file:///tmp/jetty-docbase.5012084191499633967.8080/],AVAILABLE}
+5684 [main] INFO  org.eclipse.jetty.server.Server - Started @10261ms
+6039 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6793 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6977 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6978 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6979 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6981 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+7228 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+7487 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+7553 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+7574 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+7588 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+7611 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+7612 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+7619 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-non-handled-exception started and consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+7620 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+7630 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-handled-exception started and consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+7631 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+7632 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+7633 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.653 seconds
+7633 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+7665 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+7668 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+7669 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+7671 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+7739 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+8086 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+8086 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+8101 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+8104 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+8156 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@16108b08{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+8162 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+8168 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 7.92 seconds (JVM running for 12.744)
+21641 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+21646 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+21647 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+21647 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+21647 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+21649 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+28127 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+28128 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@20b6974 for file: GenericFile[no-handled-exception.txt]
+28129 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+28131 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585077902699-0-4 on ExchangeId: ID-rosantos-1585077902699-0-3). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [         2]
+[route-non-handled-] [process1          ] [Processor@0xccc8745                                                           ] [         0]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+55644 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+55644 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@20b6974 for file: GenericFile[no-handled-exception.txt]
+55645 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+55645 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585077902699-0-6 on ExchangeId: ID-rosantos-1585077902699-0-5). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [         1]
+[route-non-handled-] [process1          ] [Processor@0xccc8745                                                           ] [         0]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+142181 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+142181 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+142181 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 300 seconds)
+142185 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+142185 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-non-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+142186 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+142186 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+142188 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed4
+142188 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+142190 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed6
+142190 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+142191 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+142191 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+142194 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 10
+142204 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 2 minutes
+142204 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.023 seconds
+142208 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+142216 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@16108b08{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+142216 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+142218 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+142218 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+142218 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+142219 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3c8460f4{application,/,[file:///tmp/jetty-docbase.5012084191499633967.8080/],UNAVAILABLE}
+642  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 15773 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+645  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3240 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$5c1b54e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3474 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8294ms to org.eclipse.jetty.util.log.Slf4jLog
+3563 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+3567 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+3915 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+3915 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2991 ms
+4343 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4349 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@c7f415
+4741 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+4742 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+4744 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+4754 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+4803 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+4805 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+4807 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@7810d705{application,/,[file:///tmp/jetty-docbase.161854914110777548.8080/],AVAILABLE}
+4808 [main] INFO  org.eclipse.jetty.server.Server - Started @9629ms
+5150 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+5817 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+5919 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+5920 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+5921 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+5922 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+5993 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6136 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6172 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6185 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6192 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+6202 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+6202 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+6205 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-non-handled-exception started and consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+6206 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+6209 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-handled-exception started and consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+6209 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+6210 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+6210 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.289 seconds
+6211 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+6230 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+6234 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+6234 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+6235 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+6313 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+6561 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+6562 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+6573 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+6575 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+6606 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@51cf938f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+6609 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+6612 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 6.338 seconds (JVM running for 11.433)
+14214 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+14221 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585078052519-0-2 on ExchangeId: ID-rosantos-1585078052519-0-1). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [         6]
+[route-non-handled-] [process1          ] [Processor@0x4dd0a44d                                                          ] [         2]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+14221 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7cdc56f4 for file: GenericFile[no-handled-exception.txt]
+14224 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+78739 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+78739 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+78741 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSendingEvent executed3
+78742 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeSentEvent executed4
+78742 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed5
+78743 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed6
+193546 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+193546 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 7
+193547 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 300 seconds)
+193550 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+193550 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-non-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+193550 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+193551 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+193552 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+193552 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+193553 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed10
+193553 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+193553 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed12
+193554 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+193555 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 14
+193563 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 3 minutes
+193563 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.017 seconds
+193565 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+193573 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@51cf938f{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+193573 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+193575 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+193576 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+193577 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+193579 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@7810d705{application,/,[file:///tmp/jetty-docbase.161854914110777548.8080/],UNAVAILABLE}
+901  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 16032 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+905  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3274 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$b9f180ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3502 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8170ms to org.eclipse.jetty.util.log.Slf4jLog
+3619 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+3624 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+3918 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+3919 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2963 ms
+4389 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4395 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@76c812d
+4753 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+4753 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+4756 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+4763 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+4802 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+4804 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+4806 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@fd78416{application,/,[file:///tmp/jetty-docbase.3780176437653430058.8080/],AVAILABLE}
+4807 [main] INFO  org.eclipse.jetty.server.Server - Started @9476ms
+5117 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+5756 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+5876 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+5876 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+5877 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+5878 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+5964 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6121 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6163 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6178 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6183 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+6196 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+6196 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+6199 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-non-handled-exception started and consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+6200 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+6203 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-handled-exception started and consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+6204 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+6204 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+6205 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.327 seconds
+6205 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+6237 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+6243 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+6244 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+6245 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+6281 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+6534 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+6535 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+6546 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+6547 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+6576 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2fa124a7{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+6579 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+6582 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 6.325 seconds (JVM running for 11.251)
+30717 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+30721 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailureHandlingEvent executed2
+30722 [Camel (camel-1) thread #3 - file://trigger/] INFO  route-handled-exception - EDITED
+30722 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed3
+30725 [Camel (camel-1) thread #3 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCompletedEvent executed4
+71232 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+71235 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585078277671-0-4 on ExchangeId: ID-rosantos-1585078277671-0-3). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [         1]
+[route-non-handled-] [process1          ] [Processor@0x7d8f6324                                                          ] [         0]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+71235 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@7fbb23d8 for file: GenericFile[no-handled-exception.txt]
+71236 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+95179 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+95179 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+95180 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 300 seconds)
+95183 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+95184 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-non-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+95184 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+95184 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+95185 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed4
+95186 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+95187 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed6
+95187 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+95187 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+95187 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+95189 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 10
+95198 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 1 minute
+95199 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.020 seconds
+95201 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+95207 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2fa124a7{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+95208 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+95209 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+95209 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+95209 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+95210 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@fd78416{application,/,[file:///tmp/jetty-docbase.3780176437653430058.8080/],UNAVAILABLE}
+762  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 16139 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+767  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3589 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$cc824ac5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3874 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8541ms to org.eclipse.jetty.util.log.Slf4jLog
+3987 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+3991 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4606 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4606 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3495 ms
+5065 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+5073 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@7bd9ae25
+5470 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+5470 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+5472 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+5480 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5527 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5529 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5531 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@15e01367{application,/,[file:///tmp/jetty-docbase.7762207595962615111.8080/],AVAILABLE}
+5532 [main] INFO  org.eclipse.jetty.server.Server - Started @10200ms
+5886 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6546 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6673 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6673 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6674 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6675 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6759 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6915 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6961 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6979 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6987 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+7002 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+7002 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+7006 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-non-handled-exception started and consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+7007 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+7011 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-handled-exception started and consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+7011 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+7011 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+7012 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.337 seconds
+7012 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+7042 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+7046 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+7046 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+7047 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+7138 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+7350 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+7351 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+7362 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+7363 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+7396 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@5b3766de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+7399 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+7402 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 7.112 seconds (JVM running for 12.071)
+81044 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+81047 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@13207d71 for file: GenericFile[no-handled-exception.txt]
+81053 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2
+81056 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585078380748-0-2 on ExchangeId: ID-rosantos-1585078380748-0-1). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [        11]
+[route-non-handled-] [process1          ] [Processor@0x541ab2f6                                                          ] [         2]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+116486 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutting down
+116486 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppingEvent executed 3
+116487 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Starting to graceful shutdown 3 routes (timeout 300 seconds)
+116489 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+116490 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-non-handled-exception shutdown complete, was consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+116490 [Camel (camel-1) thread #4 - ShutdownTask] INFO  o.a.camel.impl.DefaultShutdownStrategy - Route: route-a shutdown complete, was consuming from: file://trigger/?fileName=testa.txt&noop=false
+116491 [Thread-11] INFO  o.a.camel.impl.DefaultShutdownStrategy - Graceful shutdown of 3 routes completed in 0 seconds
+116492 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed4
+116492 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+116493 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed6
+116493 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+116494 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStoppedEvent executed8
+116494 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### unknown event public class org.apache.camel.impl.EventDrivenConsumerRoute
+116496 [Thread-11] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStoppedEvent executed 10
+116505 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) uptime 1 minute
+116505 [Thread-11] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is shutdown in 0.019 seconds
+116507 [Thread-11] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+116515 [Thread-11] INFO  o.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@5b3766de{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+116516 [Thread-11] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+116518 [Thread-11] INFO  o.a.c.c.s.CamelHttpTransportServlet - Destroyed CamelHttpTransportServlet[CamelServlet]
+116518 [Thread-11] INFO  o.e.j.s.h.ContextHandler.application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+116518 [Thread-11] INFO  io.hawt.HawtioContextListener - Destroying hawtio services
+116519 [Thread-11] INFO  o.e.jetty.server.handler.ContextHandler - Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@15e01367{application,/,[file:///tmp/jetty-docbase.7762207595962615111.8080/],UNAVAILABLE}
+667  [main] INFO  com.consulting.fuse.poc.Application - Starting Application on rosantos with PID 16294 (/home/rosantos/workspace/fuse-event-notifier-example/target/classes started by rosantos in /home/rosantos/workspace/fuse-event-notifier-example)
+670  [main] INFO  com.consulting.fuse.poc.Application - No active profile set, falling back to default profiles: default
+3333 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$cd5d962] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3628 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8522ms to org.eclipse.jetty.util.log.Slf4jLog
+3749 [main] INFO  o.s.b.w.e.j.JettyServletWebServerFactory - Server initialized with port: 8080
+4038 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.20.v20190813; built: 2019-08-13T21:28:18.144Z; git: 84700530e645e812b336747464d6fbbf370c9a20; jvm 1.8.0_232-b09
+4129 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring embedded WebApplicationContext
+4129 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3229 ms
+4572 [main] INFO  o.a.c.i.converter.DefaultTypeConverter - Type converters loaded (core: 195, classpath: 14)
+4578 [main] INFO  o.a.c.spring.boot.CamelAutoConfiguration - Adding custom EventNotifier with id: camelEvents and implementation: com.consulting.fuse.poc.event.CamelEvents@50f7ed9e
+4961 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+4961 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+4969 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+4976 [main] INFO  io.hawt.HawtioContextListener - Initialising hawtio services
+5016 [main] INFO  io.hawt.system.ConfigManager - Configuration will be discovered via system properties
+5017 [main] INFO  io.hawt.jmx.JmxTreeWatcher - Welcome to hawtio 2.0.0.fuse-sb2-750018-redhat-00001
+5019 [main] INFO  o.e.jetty.server.handler.ContextHandler - Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@6499aa9d{application,/,[file:///tmp/jetty-docbase.1634686816563700323.8080/],AVAILABLE}
+5020 [main] INFO  org.eclipse.jetty.server.Server - Started @9916ms
+5327 [main] INFO  o.s.s.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+5954 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+6070 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML routes from: classpath:camel/*.xml
+6070 [main] INFO  o.a.camel.spring.boot.RoutesCollector - Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+6071 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) is starting
+6072 [main] INFO  o.a.c.m.ManagedManagementStrategy - JMX is enabled
+6147 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartingEvent1
+6291 [main] INFO  o.apache.camel.spring.SpringCamelContext - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+6331 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed2
+6345 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed3
+6351 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteAddedEvent executed4
+6364 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-a started and consuming from: file://trigger/?fileName=testa.txt&noop=false
+6364 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed5
+6369 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-non-handled-exception started and consuming from: file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false
+6369 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed6
+6372 [main] INFO  o.apache.camel.spring.SpringCamelContext - Route: route-handled-exception started and consuming from: file://trigger/?fileName=handled-exception.txt&moveFailed=failed&noop=false
+6372 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### RouteStartedEvent executed7
+6373 [main] INFO  o.apache.camel.spring.SpringCamelContext - Total 3 routes, of which 3 are started
+6373 [main] INFO  o.apache.camel.spring.SpringCamelContext - Apache Camel 2.23.2.fuse-750029-redhat-00001 (CamelContext: camel-1) started in 0.302 seconds
+6373 [main] INFO  c.consulting.fuse.poc.event.CamelEvents - ### CamelContextStartedEvent executed 8
+6395 [main] INFO  i.h.web.auth.AuthenticationConfiguration - Starting hawtio authentication filter, JAAS realm: "karaf" authorized role(s): "admin,manager,viewer" role principal classes: ""
+6399 [main] INFO  io.hawt.web.auth.LoginServlet - hawtio login is using 1800 sec. HttpSession timeout
+6400 [main] INFO  i.hawt.web.auth.keycloak.KeycloakServlet - Keycloak integration is disabled
+6402 [main] INFO  io.hawt.system.ProxyWhitelist - Probing local addresses ...
+6423 [main] INFO  io.hawt.system.ProxyWhitelist - Initial proxy whitelist: [127.0.0.1, localhost, 192.168.15.105, rosantos]
+6662 [main] INFO  o.e.j.s.h.ContextHandler.application - Initializing Spring DispatcherServlet 'dispatcherServlet'
+6662 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+6672 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+6674 [main] INFO  o.a.c.c.s.CamelHttpTransportServlet - Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+6705 [main] INFO  o.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3dd80b00{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+6708 [main] INFO  o.s.b.web.embedded.jetty.JettyWebServer - Jetty started on port(s) 8080 (http/1.1) with context path '/'
+6712 [main] INFO  com.consulting.fuse.poc.Application - Started Application in 6.442 seconds (JVM running for 11.608)
+30887 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeCreatedEvent executed1
+30898 [Camel (camel-1) thread #2 - file://trigger/] ERROR o.a.camel.processor.DefaultErrorHandler - Failed delivery for (MessageId: ID-rosantos-1585078504927-0-2 on ExchangeId: ID-rosantos-1585078504927-0-1). Exhausted after delivery attempt: 1 caught: com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[route-non-handled-] [route-non-handled-] [file://trigger/?fileName=no-handled-exception.txt&moveFailed=failed&noop=false] [         8]
+[route-non-handled-] [process1          ] [Processor@0x8ee6079                                                           ] [         4]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+com.consulting.fuse.poc.exception.NonHandledException: Exception throwed to test
+	at com.consulting.fuse.poc.route.RouteBuilderLog$1.process(RouteBuilderLog.java:57)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:454)
+	at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:223)
+	at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:187)
+	at org.apache.camel.impl.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:174)
+	at org.apache.camel.impl.ScheduledPollConsumer.run(ScheduledPollConsumer.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+30899 [Camel (camel-1) thread #2 - file://trigger/] WARN  o.a.c.c.file.GenericFileOnCompletion - Rollback file strategy: org.apache.camel.component.file.strategy.GenericFileRenameProcessStrategy@504a65b7 for file: GenericFile[no-handled-exception.txt]
+30906 [Camel (camel-1) thread #2 - file://trigger/] INFO  c.consulting.fuse.poc.event.CamelEvents - ### ExchangeFailedEvent executed2

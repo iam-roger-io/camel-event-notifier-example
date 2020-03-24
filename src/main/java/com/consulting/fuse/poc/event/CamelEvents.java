@@ -4,12 +4,14 @@ import java.util.EventObject;
 
 import org.apache.camel.management.event.CamelContextStartedEvent;
 import org.apache.camel.management.event.CamelContextStartingEvent;
+import org.apache.camel.management.event.CamelContextStartupFailureEvent;
 import org.apache.camel.management.event.CamelContextStoppedEvent;
 import org.apache.camel.management.event.CamelContextStoppingEvent;
 import org.apache.camel.management.event.ExchangeCompletedEvent;
 import org.apache.camel.management.event.ExchangeCreatedEvent;
 import org.apache.camel.management.event.ExchangeFailedEvent;
 import org.apache.camel.management.event.ExchangeFailureHandledEvent;
+import org.apache.camel.management.event.ExchangeFailureHandlingEvent;
 import org.apache.camel.management.event.ExchangeSendingEvent;
 import org.apache.camel.management.event.ExchangeSentEvent;
 import org.apache.camel.management.event.RouteAddedEvent;
@@ -43,6 +45,10 @@ public class CamelEvents extends EventNotifierSupport {
 		} else if (event instanceof CamelContextStartedEvent) {	
 			
 			LOGGER.info("### CamelContextStartedEvent executed " + eventSequence);			
+
+		} else if (event instanceof CamelContextStartupFailureEvent) {	
+			
+			LOGGER.info("### CamelContextStartupFailureEvent" + eventSequence);			
 			
 		} else if (event instanceof RouteAddedEvent) {
 						
@@ -72,6 +78,10 @@ public class CamelEvents extends EventNotifierSupport {
 			
 			LOGGER.info("### ExchangeFailedEvent executed" + eventSequence);
 		
+		} else if (event instanceof ExchangeFailureHandlingEvent ) {			
+			
+			LOGGER.info("### ExchangeFailureHandlingEvent executed" + eventSequence);
+			
 		} else if (event instanceof ExchangeFailureHandledEvent ) {
 			
 			LOGGER.info("### ExchangeFailedEvent executed" + eventSequence);
