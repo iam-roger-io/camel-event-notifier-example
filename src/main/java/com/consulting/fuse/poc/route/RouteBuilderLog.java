@@ -17,29 +17,16 @@ public class RouteBuilderLog extends RouteBuilder {
 		onException(HandledException.class).handled(true).log("${body}");
 		
 		/*
-		 *spring-boot:run demonstrate the events: 
-		 *CamelContextStartingEvent
-		 *CamelContextStartedEvent
-		 *RouteAddedEvent
-		 *RouteStartedEvent
-		 *CamelContextStartedEvent
-		 *
-		 */
-		
-		
-		/*
 		 * The  focus of this route is to demonstrate the below events:
 		 * ExchangeCreatedEvent
 		 * ExchangeSendingEvent
 		 * ExchangeSentEvent
 		 * ExchangeCompletedEvent
 		 */
-		from("file:trigger/?fileName=testa.txt&noop=false")
-		.routeId("route-a")
-				
-		.log("next step to(\"bean:test1Processor\") will be executed")	
-		.to("bean:test1Processor")			
-		.log("next step to(\"bean:test1Processor\") executed")
+		from("file:trigger/?fileName=test-a.txt&noop=false")
+		.routeId("route-a")		
+		.to("bean:processorA")			
+		.log("### :: The step to(\"bean:processorA\") was executed")
 		;
 		
 		/*The  focus of this route is to demonstrate the below events:	 

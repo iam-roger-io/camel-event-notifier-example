@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat.consulting.poc.fuse</groupId>
-	<artifactId>fuse-event-notifier-example</artifactId>
+	<artifactId>camel-event-notifier-example</artifactId>
 	<version>1.0</version>
 
 	<properties>
 		<project.reporting.outputencoding>UTF-8</project.reporting.outputencoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<fuse.version>7.5.0.fuse-sb2-750029-redhat-00003</fuse.version>
+		<fuse.version>7.8.0.fuse-sb2-780038-redhat-00001</fuse.version>
 		<spring.boot.version>1.5.12.RELEASE</spring.boot.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>

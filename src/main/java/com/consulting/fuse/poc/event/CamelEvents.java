@@ -34,73 +34,73 @@ public class CamelEvents extends EventNotifierSupport {
 		
 		if (event instanceof ExchangeCreatedEvent) {
 			eventSequence = 1;
-			
-			((ExchangeCreatedEvent) event).getExchange().getIn().setBody("EDITED");
-			LOGGER.info("### ExchangeCreatedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeCreatedEvent executed. Execution order:  " + eventSequence);
 			
 		} else if (event instanceof CamelContextStartingEvent) {	
 			
-			LOGGER.info("### CamelContextStartingEvent" + eventSequence);			
+			LOGGER.info("### [EVENT] CamelContextStartingEvent executed" + eventSequence);			
 		
 		} else if (event instanceof CamelContextStartedEvent) {	
 			
-			LOGGER.info("### CamelContextStartedEvent executed " + eventSequence);			
+			LOGGER.info("### [EVENT] CamelContextStartedEvent executed. Execution order:  " + eventSequence);			
 
 		} else if (event instanceof CamelContextStartupFailureEvent) {	
 			
-			LOGGER.info("### CamelContextStartupFailureEvent" + eventSequence);			
+			LOGGER.info("### [EVENT] CamelContextStartupFailureEvent" + eventSequence);			
 			
 		} else if (event instanceof RouteAddedEvent) {
 						
-			LOGGER.info("### RouteAddedEvent executed" + eventSequence);	
+			LOGGER.info("### [EVENT] RouteAddedEvent executed" + eventSequence);	
 			
 		} else if (event instanceof RouteStartedEvent) {
 			
-			LOGGER.info("### RouteStartedEvent executed" + eventSequence);	
+			LOGGER.info("### [EVENT] RouteStartedEvent executed" + eventSequence);	
 			
 		} else if (event instanceof RouteStoppedEvent) {
 			
-			LOGGER.info("### RouteStoppedEvent executed" + eventSequence);				
+			LOGGER.info("### [EVENT] RouteStoppedEvent executed" + eventSequence);				
 			
 		} else if (event instanceof ExchangeSendingEvent) {		
 			
-			LOGGER.info("### ExchangeSendingEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeSendingEvent executed" + eventSequence);
 			
 		} else if (event instanceof ExchangeSentEvent) {	
 			
-			LOGGER.info("### ExchangeSentEvent executed" + eventSequence);
+			String body = ((ExchangeSentEvent) event).getExchange().getIn().getBody(String.class);
+			((ExchangeSentEvent) event).getExchange().getIn().setBody("BODY EDITED BY EVENT");
+			LOGGER.info("### [EVENT] ExchangeSentEvent executed" + eventSequence + " ::  Change  Value:" + body + " to " + " BODY EDITED BY EVENT");
 		
 		} else if (event instanceof ExchangeCompletedEvent) {
 						
-			LOGGER.info("### ExchangeCompletedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeCompletedEvent executed" + eventSequence);
 			
 		} else if (event instanceof ExchangeFailedEvent) {
 			
-			LOGGER.info("### ExchangeFailedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailedEvent executed" + eventSequence);
 		
 		} else if (event instanceof ExchangeFailureHandlingEvent ) {			
 			
-			LOGGER.info("### ExchangeFailureHandlingEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailureHandlingEvent executed" + eventSequence);
 			
 		} else if (event instanceof ExchangeFailureHandledEvent ) {
 			
-			LOGGER.info("### ExchangeFailedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailedEvent executed" + eventSequence);
 						
 		} else if (event instanceof CamelContextStoppedEvent) {
 			
-			LOGGER.info("### CamelContextStoppedEvent executed " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order:  " + eventSequence);
 			
 		} else if (event instanceof CamelContextStoppingEvent) {
 			
-			LOGGER.info("### CamelContextStoppingEvent executed " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppingEvent executed. Execution order:  " + eventSequence);
 		
 		} else if (event instanceof CamelContextStoppedEvent) {
 			
-			LOGGER.info("### CamelContextStoppedEvent executed " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order:  " + eventSequence);
 			
 		} else {	
 			
-			LOGGER.info("### unknown event " + event.getSource().getClass().toGenericString());
+			LOGGER.info("### [EVENT] unknown event " + event.getSource().getClass().toGenericString());
 		
 		}	
 		
@@ -110,7 +110,6 @@ public class CamelEvents extends EventNotifierSupport {
 
 	@Override
 	public boolean isEnabled(EventObject event) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
