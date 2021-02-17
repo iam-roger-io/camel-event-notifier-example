@@ -32,7 +32,7 @@ public class RouteBuilderLog extends RouteBuilder {
 		/*The  focus of this route is to demonstrate the below events:	 
 		 * ExchangeFailedEvent
 		 */
-		from("file:trigger/?fileName=no-handled-exception.txt&noop=false&moveFailed=failed")
+		from("file:trigger/?fileName=test-b.txt&noop=false&moveFailed=failed")
 		.routeId("route-non-handled-exception")
 		.process(new Processor() {
 
@@ -54,7 +54,7 @@ public class RouteBuilderLog extends RouteBuilder {
 		 * ExchangeFailureHandlingEvent
 		 * ExchangeFailedEvent
 		 */
-		from("file:trigger/?fileName=handled-exception.txt&noop=false&moveFailed=failed")
+		from("file:trigger/?fileName=test-c.txt&noop=false&moveFailed=failed")
 		.routeId("route-handled-exception")
 		.process(new Processor() {
 

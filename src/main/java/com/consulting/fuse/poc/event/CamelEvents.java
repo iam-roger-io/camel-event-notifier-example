@@ -34,7 +34,7 @@ public class CamelEvents extends EventNotifierSupport {
 		
 		if (event instanceof ExchangeCreatedEvent) {
 			eventSequence = 1;
-			LOGGER.info("### [EVENT] ExchangeCreatedEvent executed. Execution order:  " + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeCreatedEvent executed. Execution order: " + eventSequence);
 			
 		} else if (event instanceof CamelContextStartingEvent) {	
 			
@@ -42,61 +42,64 @@ public class CamelEvents extends EventNotifierSupport {
 		
 		} else if (event instanceof CamelContextStartedEvent) {	
 			
-			LOGGER.info("### [EVENT] CamelContextStartedEvent executed. Execution order:  " + eventSequence);			
+			LOGGER.info("### [EVENT] CamelContextStartedEvent executed. Execution order: " + eventSequence);			
 
 		} else if (event instanceof CamelContextStartupFailureEvent) {	
 			
-			LOGGER.info("### [EVENT] CamelContextStartupFailureEvent" + eventSequence);			
+			LOGGER.info("### [EVENT] CamelContextStartupFailureEvent " + eventSequence);			
 			
 		} else if (event instanceof RouteAddedEvent) {
 						
-			LOGGER.info("### [EVENT] RouteAddedEvent executed" + eventSequence);	
+			LOGGER.info("### [EVENT] RouteAddedEvent executed " + eventSequence);	
 			
 		} else if (event instanceof RouteStartedEvent) {
 			
-			LOGGER.info("### [EVENT] RouteStartedEvent executed" + eventSequence);	
+			LOGGER.info("### [EVENT] RouteStartedEvent executed " + eventSequence);	
 			
 		} else if (event instanceof RouteStoppedEvent) {
 			
-			LOGGER.info("### [EVENT] RouteStoppedEvent executed" + eventSequence);				
+			LOGGER.info("### [EVENT] RouteStoppedEvent executed " + eventSequence);				
 			
 		} else if (event instanceof ExchangeSendingEvent) {		
 			
-			LOGGER.info("### [EVENT] ExchangeSendingEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeSendingEvent executed " + eventSequence);
 			
 		} else if (event instanceof ExchangeSentEvent) {	
 			
 			String body = ((ExchangeSentEvent) event).getExchange().getIn().getBody(String.class);
-			((ExchangeSentEvent) event).getExchange().getIn().setBody("BODY EDITED BY EVENT");
-			LOGGER.info("### [EVENT] ExchangeSentEvent executed" + eventSequence + " ::  Change  Value:" + body + " to " + " BODY EDITED BY EVENT");
+			
+			body = "EDITED: " + body.toUpperCase();			
+			((ExchangeSentEvent) event).getExchange().getIn().setBody(body);
+			
+			LOGGER.info("### [EVENT] ExchangeSentEvent executed " + eventSequence + " :: Body content edited to UPPERCASE");
 		
 		} else if (event instanceof ExchangeCompletedEvent) {
 						
-			LOGGER.info("### [EVENT] ExchangeCompletedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeCompletedEvent executed " + eventSequence);
 			
 		} else if (event instanceof ExchangeFailedEvent) {
 			
-			LOGGER.info("### [EVENT] ExchangeFailedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailedEvent executed " + eventSequence);
 		
 		} else if (event instanceof ExchangeFailureHandlingEvent ) {			
 			
-			LOGGER.info("### [EVENT] ExchangeFailureHandlingEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailureHandlingEvent executed " + eventSequence);
 			
 		} else if (event instanceof ExchangeFailureHandledEvent ) {
 			
-			LOGGER.info("### [EVENT] ExchangeFailedEvent executed" + eventSequence);
+			LOGGER.info("### [EVENT] ExchangeFailedEvent executed " + eventSequence);
 						
 		} else if (event instanceof CamelContextStoppedEvent) {
 			
-			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order:  " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order:" + eventSequence);
 			
 		} else if (event instanceof CamelContextStoppingEvent) {
 			
-			LOGGER.info("### [EVENT] CamelContextStoppingEvent executed. Execution order:  " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppingEvent executed. Execution order: " + eventSequence);
 		
 		} else if (event instanceof CamelContextStoppedEvent) {
 			
-			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order:  " + eventSequence);
+			LOGGER.info("### [EVENT] CamelContextStoppedEvent executed. Execution order: " + eventSequence);
 			
 		} else {	
 			
